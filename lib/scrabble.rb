@@ -2,7 +2,7 @@ class Scrabble
 
   def score(word)
     score = 0
-    letters = word.split(//)
+    letters = word.to_s.split(//)
     letters.each do |letter|
       score += point_values[letter.upcase]
     end

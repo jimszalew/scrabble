@@ -19,4 +19,10 @@ class ScrabbleTest < Minitest::Test
     assert_equal 8, Scrabble.new.score("hello")
     assert_equal 16, Scrabble.new.score("zebra")
   end
+
+  def test_it_can_score_nil_or_empty_string_as_zero
+    assert_equal 0, Scrabble.new.score("")
+    assert_equal 0, Scrabble.new.score(nil)
+  end
+
 end
